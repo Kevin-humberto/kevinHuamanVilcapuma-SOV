@@ -1,9 +1,29 @@
 
+body {
+    background-color: rgb(119, 174, 223);
+}
+
+.titulo{
+    text-align: center;
+}
+
 .letra {
-    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-.img {
-    position: center;
+
+section input, section label, section select {
+    display: block;
+    margin-bottom: 10px;
 }
+
+table {
+    border-collapse: collapse; 
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid black; 
+    padding: 8px;           
+    text-align: center;        
+  }
