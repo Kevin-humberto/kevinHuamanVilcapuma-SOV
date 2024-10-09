@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reto2</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <nav class="navbar">
+        <!-- Logo a la izquierda -->
+        <div class="navbar-logo">
+            <img src="imagen/LogoVG.png" alt="Logo">
+        </div>
+        
+        <!-- Menú de hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Enlaces de navegación a la derecha -->
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#" class="navbar-link">
+                <img src="imagenReto2/icono 1.png">
+                Inicio
+            </a>
+            <a href="#" class="navbar-link">
+                <img src="imagenReto2/icono 2.png">
+                Servicios
+            </a>
+            <a href="#" class="navbar-link">
+                <img src="imagenReto2/nosotros.png">
+                Nosotros
+            </a>
+            <a href="#" class="navbar-link">
+                <img src="imagenReto2/call.png">
+                Contactanos
+            </a>
+        </div>
+    </nav>
+    <h2>ustedes pueden</h2>
+
+    <script>
+        function toggleMenu() {
+            var navbarLinks = document.getElementById('navbarLinks');
+            navbarLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

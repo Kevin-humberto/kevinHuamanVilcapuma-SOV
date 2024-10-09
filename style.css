@@ -1,0 +1,90 @@
+/* Fondo de la página con una imagen */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('imagenReto2/imagen\ 1.png');
+    
+}
+
+/* Estilos generales de la barra de navegación */
+.navbar {
+    background-color: rgb(57, 144, 188);
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: 140px;
+}
+
+/* Logo en la izquierda */
+.navbar-logo img {
+    width: 220px;
+    height: auto;
+}
+
+/* Contenedor de los enlaces */
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+.navbar-link:hover {
+    background-color: #ebda42;
+    border-radius: 5px;
+}
+
+
+.navbar-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 280px;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: auto;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        border-radius: 0 0 8px 8px;
+        padding: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
