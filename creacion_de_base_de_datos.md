@@ -45,10 +45,10 @@
     ````SQL
     DESCRIBE adviser;
     ````
-#  ELIMINAR TABLA
+### ELIMINAR TABLA
 -- Sintaxis: 
 1. DROP TABLE nombre_tabla;
-2. Ejemplo: Eliminar la tabla carrera
+2. Ejemplo: Eliminar la tabla ejemplo
     ````SQL
     DROP TABLE ejemplo;
     SHOW TABLES;
