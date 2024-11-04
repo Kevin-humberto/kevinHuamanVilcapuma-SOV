@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tienda Online</title>
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <header>
+        <div class="logo">Mi Tienda
+            <img src="imagenes/logo.jpg" alt="Logo de la tienda" height="80px" width="auto">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider"></span>
+    </label>
+
+    <section class="banner">
+        <img src="imagenes/galleta.webp" alt="Promoción actual">
+        <div class="banner-text">
+            <h1>Compra ahora</h1>
+        </div>
+    </section>
+    <br>
+    <section class="categorias">
+        <h2>Categorías</h2>
+        <div class="grid">
+            <div class="categoria">
+                <img src="imagenes/chocman.jpg" alt="Ropa" height="400px" width="auto">
+                <p>Dulces</p>
+            </div>
+            <div class="categoria">
+                <img src="imagenes/electronico.jpg" alt="Electrónica" height="400px" width="auto">
+                <p>Electrónicas</p>
+            </div>
+            <div class="categoria">
+                <img src="imagenes/sal.webp" alt="Hogar" height="400px" width="auto">
+                <p>Hogar</p>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class="productos">
+        <h2>Productos Destacados</h2>
+        <br>
+        <div class="grid-productos">
+            <div class="producto">
+                <h3>Producto 1</h3>
+                <img src="imagenes/tablet.jpg" alt="" height="50px" width="auto">
+                <p>Precio: $300</p>
+                <button>Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Producto 2</h3>
+                <img src="imagenes/chocman.jpg" alt="" height="50px" width="auto">
+                <p>Precio: $10</p>
+                <button>Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <h3>Producto 3</h3>
+                <img src="imagenes/aceite.png" alt="" height="50px" width="auto">
+                <p>Precio: $200</p>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="detalle-producto">
+        <div class="carrusel">
+            <input type="radio" name="carrusel" id="img1" checked>
+            <input type="radio" name="carrusel" id="img2">
+            <input type="radio" name="carrusel" id="img3">
+
+            <div class="imagenes">
+                <div class="imagen" id="i1">
+                    <img src="imagenes/aceite.png" alt="Producto 1" height="400px" width="auto">
+                </div>
+                <div class="imagen" id="i2">
+                    <img src="imagenes/soya.jpg" alt="Producto 1 - Vista 2" height="400px" width="auto">
+                </div>
+                <div class="imagen" id="i3">
+                    <img src="imagenes/chocman.jpg" alt="Producto 1 - Vista 3" height="400px" width="auto">
+                </div>
+            </div>
+
+            <div class="navegacion">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+            </div>
+        </div>
+
+        <div class="info-producto">
+            <h1>Aceite</h1>
+            <br>
+            <p>Aceite Fision de alta calidad</p>
+            <br>
+            <p>Precio: $10</p>
+            <br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="descripcion-extendida">
+            <h2>Descripción Detallada</h2>
+            <div class="tabs">
+                <button class="tab" onclick="openTab('info')">Información</button>
+                <button class="tab" onclick="openTab('cuidado')">Instrucciones de Cuidado</button>
+            </div>
+            <div id="info" class="tab-content">
+                <p>Detalles adicionales del producto, materiales, etc.</p>
+            </div>
+            <div id="cuidado" class="tab-content" style="display:none;">
+                <p>Instrucciones para el cuidado del producto.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(tabName).style.display = 'block';
+        }
+    </script>
+</body>
+
+
+</html>

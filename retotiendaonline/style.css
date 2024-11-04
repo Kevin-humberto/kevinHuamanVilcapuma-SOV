@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    padding: 10 px;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #302e2e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+
+    to {
+        opacity: 1;
+    }
+}
+
+.categorias {
+    padding: 20px;
+}
+
+.categorias h2 {
+    text-align: center;
+}
+
+.categorias p {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.categoria {
+    position: relative;
+    overflow: hidden;
+}
+
+.categoria img {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.categoria:hover img {
+    opacity: 0.8;
+}
+
+.productos {
+    padding: 20px;
+}
+
+.productos h2 {
+    text-align: center;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.producto button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto button:hover {
+    background-color: #218838;
+}
+
+
+/* Estilos generales */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carrusel input {
+    display: none;
+}
+
+.imagen {
+    display: none;
+}
+
+#img1:checked~.imagenes #i1,
+#img2:checked~.imagenes #i2,
+#img3:checked~.imagenes #i3 {
+    display: block;
+}
+
+.navegacion label {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.navegacion label:hover {
+    background: #aaa;
+}
+
+.info-producto {
+    padding: 20px;
+}
+
+.agregar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.agregar:hover {
+    transform: scale(1.05);
+}
+
+.descripcion-extendida {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tab-content {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.carrito {
+    padding: 20px;
+    margin-left: 40%;
+}
+
+.lista-articulos {
+    margin-bottom: 20px;
+}
+
+.articulo {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.articulo img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.finalizar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.finalizar:hover {
+    background-color: #0056b3;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 3s forwards;
+    /* Duración de la animación */
+}
+
+.loader::after {
+    content: '';
+    border: 10px solid #3498db;
+    border-top: 10px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+
+    99% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .grid,
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
